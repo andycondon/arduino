@@ -5,5 +5,6 @@ void setup(void)
 
 void loop(void) 
 {
-  Serial.print("It works!");
+  Serial.print("It works!\n");
+  delay(1000);
 }
