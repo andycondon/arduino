@@ -7,8 +7,16 @@ void setup(void)
 
 void loop(void) 
 {
-  digitalWrite(13, HIGH);   // set the LED on
-  delay(1000);              // wait for a second
-  digitalWrite(13, LOW);    // set the LED off
-  delay(1000);              // wait for a second
+  digitalWrite(13, HIGH);
+  delay(50);
+  digitalWrite(13, LOW);
+  delay(50);
+  digitalWrite(13, HIGH);
+  delay(50);
+  digitalWrite(13, LOW);
+  delay(05);
+  digitalWrite(13, HIGH);
+  delay(50);
+  digitalWrite(13, LOW);
+  delay(1000);
 }
