@@ -8,82 +8,40 @@ void setup(void)
   pinMode(8,OUTPUT);
 }
 
+void blink(int pin)
+{
+  digitalWrite(pin, HIGH);
+  delay(100);
+  digitalWrite(pin, LOW);
+}
 
 void loop(void) 
 {
-  digitalWrite(13, HIGH);
-  delay(100);
-  digitalWrite(13, LOW);
-  delay(100);
-  digitalWrite(13, HIGH);
-  delay(100);
-  digitalWrite(13, LOW);
-  delay(100);
-  digitalWrite(13, HIGH);
-  delay(100);
-  digitalWrite(13, LOW);
-  delay(1000);
+  blink(13);
   
-  digitalWrite(12, HIGH);
-  delay(100);
-  digitalWrite(12, LOW);
-  delay(100);
-  digitalWrite(12, HIGH);
-  delay(100);
-  digitalWrite(12, LOW);
-  delay(100);
-  digitalWrite(12, HIGH);
-  delay(100);
-  digitalWrite(12, LOW);
-  delay(1000);
+  blink(13);
+  blink(12);
   
-  digitalWrite(11, HIGH);
-  delay(100);
-  digitalWrite(11, LOW);
-  delay(100);
-  digitalWrite(11, HIGH);
-  delay(100);
-  digitalWrite(11, LOW);
-  delay(100);
-  digitalWrite(11, HIGH);
-  delay(100);
-  digitalWrite(11, LOW);
-  delay(1000);
+  blink(13);
+  blink(12);
+  blink(11);
   
-  delay(100);
-  digitalWrite(10, LOW);
-  delay(100);
-  digitalWrite(10, HIGH);
-  delay(100);
-  digitalWrite(10, LOW);
-  delay(100);
-  digitalWrite(10, HIGH);
-  delay(100);
-  digitalWrite(10, LOW);
-  delay(1000);
+  blink(13); 
+  blink(12);
+  blink(11);
+  blink(10);
+ 
+  blink(13);
+  blink(12);
+  blink(11);
+  blink(10);
+  blink(9);
   
-  delay(100);
-  digitalWrite(9, LOW);
-  delay(100);
-  digitalWrite(9, HIGH);
-  delay(100);
-  digitalWrite(9, LOW);
-  delay(100);
-  digitalWrite(9, HIGH);
-  delay(100);
-  digitalWrite(9, LOW);
-  delay(1000);
-  
-   delay(100);
-  digitalWrite(8, LOW);
-  delay(100);
-  digitalWrite(8, HIGH);
-  delay(100);
-  digitalWrite(8, LOW);
-  delay(100);
-  digitalWrite(8, HIGH);
-  delay(100);
-  digitalWrite(8, LOW);
-  delay(1000);
+  blink(13);
+  blink(12);
+  blink(11);
+  blink(10);
+  blink(9);
+  blink(8);
 }
 
