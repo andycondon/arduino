@@ -1,6 +1,7 @@
 #include "utility/debug.h"
 
-void setup(){
+void setup()
+{
   lcd_init();
   
   delay(1000);
@@ -10,7 +11,7 @@ void setup(){
   wifi_init();
 }
 
-void loop(){
-  lcd_print("test ");
-  delay(1000);
+void loop()
+{
+  wifi_print_data_to_LCD();
 }
