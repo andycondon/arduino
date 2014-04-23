@@ -49,3 +49,38 @@ void wifi_init()
     delay(100); // ToDo: Insert a DHCP timeout!
   }
 }
+
+bool displayConnectionDetails(void)
+{
+  uint32_t ipAddress, netmask, gateway, dhcpserv, dnsserv;
+  
+  lcd_clear();
+  lcd_cursor("0", "00");
+  
+  if(!cc3000.getIPAddress(&ipAddress, &netmask, &gateway, &dhcpserv, &dnsserv))
+  {
+    lcd_print("Unable to retrieve the IP Address!");
+    return false;
+  }
+  else
+  {
+    lcd_print("IP: "); printIPdots(ipAddress);
+    lcd_cursor("1", "00");
+    lcd_print("GW: "); printIPdots(gateway);
+    lcd_cursor("2", "00");
+    lcd_print("DHCP: "); printIPdots(dhcpserv);
+    lcd_cursor("3", "00");
+    lcd_print("DNS: "); printIPdots(dnsserv);
+    return true;
+  }
+}
+
+void printIPdots(uint32_t ip) {
+  lcd_print((uint8_t)(ip >> 24));
+  lcd_print('.');
+  lcd_print((uint8_t)(ip >> 16));
+  lcd_print('.');
+  lcd_print((uint8_t)(ip >> 8));
+  lcd_print('.');
+  lcd_print((uint8_t)(ip)); 
+}
